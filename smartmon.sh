@@ -146,4 +146,4 @@ for device in ${device_list}; do
   /usr/sbin/smartctl -i -H -d "${type}" "${disk}" | parse_smartctl_info "${disk}" "${type}"
   # Get the SMART attributes
   /usr/sbin/smartctl -A -d "${type}" "${disk}" | parse_smartctl_attributes "${disk}" "${type}"
-done | format_output
+done | format_output > /textfiles/smart.prom
