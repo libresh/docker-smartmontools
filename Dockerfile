@@ -1,3 +1,3 @@
 FROM alpine
 
-RUN apk add --no-cache smartmontools
+RUN apk add --no-cache bash smartmontools
