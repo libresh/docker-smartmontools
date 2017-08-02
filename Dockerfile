@@ -1,5 +1,5 @@
 FROM alpine
 
 RUN apk add --no-cache bash smartmontools
-COPY docker-cron /usr/local/bin/cron
+COPY cron /usr/local/bin/
 COPY smartmon.sh /usr/local/bin/smartmon-prom
