@@ -1,0 +1,2 @@
+#!/bin/bash -eux
+smartctl --scan | cut -d" " -f1 | xargs -n1 smartctl --test=short
