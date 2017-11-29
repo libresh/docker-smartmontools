@@ -127,7 +127,7 @@ OUTPUTAWK
 
 format_output() {
   sort \
-  | awk -F'{' "${output_format_awk}" > /textfiles/smart.prom
+  | awk -F'{' "${output_format_awk}" >> /textfiles/smart.prom
 }
 
 smartctl_version="$(/usr/sbin/smartctl -V | head -n1  | awk '$1 == "smartctl" {print $2}')"
