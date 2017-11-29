@@ -7,6 +7,8 @@
 #       data in them than you'd think.
 #       http://arstechnica.com/civis/viewtopic.php?p=22062211
 
+echo "smartmon_exporter_starting_time $(date +%s)" > /textfiles/smart.prom
+
 disks="$(/usr/sbin/smartctl --scan | awk '{print $1 "|" $3}')"
 
 parse_smartctl_attributes_awk="$(cat << 'SMARTCTLAWK'
