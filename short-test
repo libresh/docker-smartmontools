@@ -1,3 +1,3 @@
 #!/bin/bash -eux
 echo "smartmon_short_test_starting_time $(date +%s)" > /textfiles/smart-short-test.prom
-smartctl --scan | cut -d" " -f1 | xargs -n1 smartctl --test=short
+smartctl --scan | cut -d" " -f1 | xargs -n1 smartctl --test=short -t force
